@@ -51,4 +51,3 @@ gem 'rails-controller-testing', group: [ :test ]
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
-gem "pg"
