@@ -1,0 +1,26 @@
+// Specific CSS for your home-page
+.banner-home {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    // width: 98vw;
+    margin: auto;
+}
+
+.title-banner{
+  text-align: center;
+  margin:auto;
+  font-size: 60px;
+  font-weight: bolder;
+
+}
+
+body {
+  background-color: #4069E0;
+}
+
+h2{
+  font-weight: bolder;
+  color: white;
+}
