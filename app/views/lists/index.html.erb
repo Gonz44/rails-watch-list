@@ -1,4 +1,4 @@
-<div class="banner-home" style="background-image: url(<%= asset_url ('cinema.jpeg')%>)">
+<div class="banner-home" style="background-image: url(<%= asset_url ('cinema.jpg')%>)">
   <h1 class="title-banner">Movie Vault</h1>
 
 
@@ -19,7 +19,7 @@
     <% @lists.each do |list| %>
       <div class="co-12 colsm-6 col-md-4 mb-3" id="card-box">
         <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path ('scifi.jpeg')%>)">
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= asset_path ('scifi.jpg')%>)">
             <%= list.name %>
           </div>
         <% end %>
