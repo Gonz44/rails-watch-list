@@ -1,0 +1,41 @@
+#card-box{
+  height: 50vh;
+  width: 30vw;
+  overflow: hidden;
+
+  padding: 0;
+}
+
+.card-pic{
+  height:85%;
+  width:100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    transition: transform 0.25s ease;
+  }
+  img:hover{
+    transform: scale(1.4);
+  }
+}
+
+.card-info{
+  height:15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    background-color: #00377B;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.watchlist_card{
+  border: 10px solid #00377B;
+}

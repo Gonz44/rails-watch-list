@@ -7,9 +7,9 @@ end
   def create
     @list = List.find(params[:list_id])
     @bookmark = Bookmark.new(bookmark_params)
-    @movie = Movie.select { |movie| movie.title == params[:bookmark][:movie] }[0]
+    #@movie = Movie.select { |movie| movie.title == params[:bookmark][:movie] }[0]
     @bookmark.list = @list
-    @bookmark.movie = @movie
+    #@bookmark.movie = @movie
     if @bookmark.save
       redirect_to list_path(@list)
     else

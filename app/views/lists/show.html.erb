@@ -3,28 +3,20 @@
     <h1><%= @list.name %></h1>
   </div>
 </div>
+
 <div class='cards m-3'>
   <% @bookmarks.each do |mark| %>
-    <div class='card-category' style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://observer.com/wp-content/uploads/sites/2/2021/05/summer-movies-2021-new-e1620919489437.jpg?quality=80);'>
+    <div class='card-category' style='background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= mark.movie.poster_url %>);'>
       <%= mark.movie.title %>
-        <i class='fas fa-trash'></i>
-      <% end %>
-    </div>
-  
-</div>
-<div class='card-product'>
-  <% @bookmarks.each do |mark| %>
-    <img src='https://observer.com/wp-content/uploads/sites/2/2021/05/summer-movies-2021-new-e1620919489437.jpg?quality=80' />
-    <div class='card-product-infos'>
-      <h2>Product name</h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <i class='fas fa-trash'></i>
     </div>
   <% end %>
 </div>
 
-<%= simple_form_for [@list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
 </div>

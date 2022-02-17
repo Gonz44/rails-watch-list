@@ -35,7 +35,7 @@ class ListsController < ApplicationController
   def destroy
     @list = List.find(params[:id])
     @list.destroy
-    redirect_to lists_path
+    redirect_to lists_path(@list)
   end
 
   private
@@ -44,8 +44,7 @@ class ListsController < ApplicationController
     @list = List.find(params[:id])
   end
 
-
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :photo)
   end
 end
